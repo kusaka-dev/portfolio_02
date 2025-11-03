@@ -1,0 +1,123 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+// Project: News
+.p-news {
+  padding: 100px 120px;
+  background-color: #fff;
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 50px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.28px;
+    color: $color-primary-green;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.64px;
+    color: #000;
+    margin: 0;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  &__tab {
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.32px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--active {
+      background-color: $color-primary-green;
+      border-color: $color-primary-green;
+      color: #fff;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 40px;
+    border: 1px solid #000;
+    border-radius: 4px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfdfdf;
+
+    &:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__item-date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.28px;
+    color: #a79b9b;
+  }
+
+  &__item-category {
+    padding: 2px 10px;
+    border: 1px solid $color-primary-green;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.28px;
+    color: $color-primary-green;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.32px;
+    color: #000;
+    margin: 0;
+  }
+}

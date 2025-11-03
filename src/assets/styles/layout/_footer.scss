@@ -1,0 +1,163 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+// Layout: Footer
+.l-footer {
+  background-color: #fff;
+
+  &__main {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
+
+  &__brand {
+    margin-bottom: 60px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 58px;
+    margin-bottom: 20px;
+  }
+
+  &__logo-icon {
+    width: 30px;
+    height: 25px;
+    background-color: #2d6a4f;
+  }
+
+  &__logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo-primary {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
+    color: $color-primary-green;
+  }
+
+  &__logo-secondary {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: $color-primary-green;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.32px;
+    color: #000;
+    margin: 0;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+  }
+
+  &__nav-group {
+    width: 208px;
+  }
+
+  &__nav-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+    margin: 0 0 10px;
+  }
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &--single {
+      li {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2;
+      letter-spacing: 0.32px;
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #d6d6d6;
+    padding: 25px 0;
+  }
+
+  &__bottom-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.32px;
+    color: #000;
+    margin: 0;
+  }
+
+  &__privacy {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.32px;
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

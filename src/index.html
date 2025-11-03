@@ -5,43 +5,280 @@ description: 'これはサンプルページのディスクリプションです
 'キーワード1, キーワード2, キーワード3' }) %>
 
 <main>
-  <section>
-    <h1>コーディングテンプレート</h1>
-    <p>
-      Vite + EJS + SCSSを使用したモダンなWeb開発テンプレートです。<br />
-      効率的な開発環境で、素早くプロジェクトを立ち上げることができます。
-    </p>
+  <!-- FV Section -->
+  <section class="p-fv">
+    <div class="splide p-fv__slider" id="fv-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="p-fv__slide">
+              <div class="p-fv__slide-image">
+                <img src="/assets/images/fv/fv-01.png" alt="">
+                <div class="p-fv__slide-overlay"></div>
+              </div>
+              <div class="p-fv__slide-content">
+                <h2 class="p-fv__slide-title">
+                  伴走型コンサルティングで、<br>
+                  クライアントの新たな価値を創出する
+                </h2>
+                <p class="p-fv__slide-text">
+                  Edge Strategyは、経営戦略・組織開発・DX推進を通じて、クライアントの確かな成長に貢献していきます。
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-fv__slide">
+              <div class="p-fv__slide-image">
+                <img src="/assets/images/fv/fv-02.png" alt="">
+                <div class="p-fv__slide-overlay"></div>
+              </div>
+              <div class="p-fv__slide-content">
+                <h2 class="p-fv__slide-title">
+                  伴走型コンサルティングで、<br>
+                  クライアントの新たな価値を創出する
+                </h2>
+                <p class="p-fv__slide-text">
+                  Edge Strategyは、経営戦略・組織開発・DX推進を通じて、クライアントの確かな成長に貢献していきます。
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="p-fv__slide">
+              <div class="p-fv__slide-image">
+                <img src="/assets/images/fv/fv-03.png" alt="">
+                <div class="p-fv__slide-overlay"></div>
+              </div>
+              <div class="p-fv__slide-content">
+                <h2 class="p-fv__slide-title">
+                  伴走型コンサルティングで、<br>
+                  クライアントの新たな価値を創出する
+                </h2>
+                <p class="p-fv__slide-text">
+                  Edge Strategyは、経営戦略・組織開発・DX推進を通じて、クライアントの確かな成長に貢献していきます。
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>含まれる機能</h2>
-    <ul>
-      <li>Vite - 高速な開発サーバーとビルドツール</li>
-      <li>EJS - コンポーネントベースのテンプレートエンジン</li>
-      <li>SCSS - 変数、ミックスイン、ネストに対応したCSSプリプロセッサ</li>
-      <li>グロブインポート - SCSSファイルの自動インポート</li>
-      <li>モダンCSS Reset - アクセシビリティに配慮したリセットCSS</li>
-    </ul>
+  <!-- About us Section -->
+  <section class="p-about">
+    <div class="p-about__inner">
+      <div class="p-about__content">
+        <div class="p-about__heading">
+          <p class="p-about__label">About us</p>
+          <h2 class="p-about__title">
+            確かな成長を実現する、<br>
+            戦略コンサルティング Edge Strategy
+          </h2>
+        </div>
+        <p class="p-about__text">
+          Edge Strategyは、経営戦略・組織開発・DX推進を軸に、<br>
+          企業の成長課題を総合的に支援するコンサルティングファームです。<br>
+          戦略立案から実行支援まで、伴走型のスタイルで<br>
+          クライアントの確かな成長と新たな価値創出に貢献します。
+        </p>
+        <a href="#" class="c-button">
+          <span>Edge Strategyについて</span>
+          <span class="c-button__icon"></span>
+        </a>
+      </div>
+      <div class="p-about__images">
+        <div class="p-about__image p-about__image--1"></div>
+        <div class="p-about__image p-about__image--2"></div>
+        <div class="p-about__image p-about__image--3"></div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>使い方</h2>
-    <ol>
-      <li>依存関係のインストール: <code>npm install</code></li>
-      <li>開発サーバーの起動: <code>npm run dev</code></li>
-      <li>本番ビルド: <code>npm run build</code></li>
-    </ol>
+  <!-- Service Section -->
+  <section class="p-service">
+    <div class="p-service__inner">
+      <div class="p-service__heading">
+        <p class="p-service__label">Service</p>
+        <h2 class="p-service__title">成長を加速させる、3つのアプローチ</h2>
+      </div>
+      <div class="p-service__cards">
+        <div class="c-card">
+          <div class="c-card__header">
+            <p class="c-card__subtitle">Business Strategy</p>
+            <h3 class="c-card__title">経営戦略コンサルティング</h3>
+          </div>
+          <div class="c-card__icon">
+            <div class="c-card__icon-placeholder"></div>
+          </div>
+          <p class="c-card__text">
+            企業の成長を支える戦略立案から実行支援まで。<br>
+            市場分析、競合調査を通じて、<br>
+            実現可能な成長戦略を策定します。
+          </p>
+          <a href="#" class="c-button">
+            <span>詳しく見る</span>
+            <span class="c-button__icon"></span>
+          </a>
+        </div>
+        <div class="c-card">
+          <div class="c-card__header">
+            <p class="c-card__subtitle">HR Development</p>
+            <h3 class="c-card__title">組織・人材開発</h3>
+          </div>
+          <div class="c-card__icon">
+            <div class="c-card__icon-placeholder"></div>
+          </div>
+          <p class="c-card__text">
+            組織の成長を支える人材育成と組織体制の最適化。<br>
+            人事制度設計から研修プログラムまで、<br>
+            総合的に支援します。
+          </p>
+          <a href="#" class="c-button">
+            <span>詳しく見る</span>
+            <span class="c-button__icon"></span>
+          </a>
+        </div>
+        <div class="c-card">
+          <div class="c-card__header">
+            <p class="c-card__subtitle">DX Support</p>
+            <h3 class="c-card__title">DX推進支援</h3>
+          </div>
+          <div class="c-card__icon">
+            <div class="c-card__icon-placeholder"></div>
+          </div>
+          <p class="c-card__text">
+            デジタル技術を活用した<br>
+            業務変革とビジネスモデルの革新。<br>
+            DX戦略の策定から実装まで、伴走型で支援します。
+          </p>
+          <a href="#" class="c-button">
+            <span>詳しく見る</span>
+            <span class="c-button__icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>プロジェクト構成</h2>
-    <ul>
-      <li><code>src/</code> - ソースファイル</li>
-      <li><code>src/components/</code> - EJSコンポーネント</li>
-      <li><code>src/assets/styles/</code> - SCSSファイル</li>
-      <li><code>src/assets/scripts/</code> - JavaScriptファイル</li>
-      <li><code>dist/</code> - ビルド出力先</li>
-    </ul>
+  <!-- Slider Section -->
+  <section class="p-slider">
+    <div class="p-slider__track">
+      <div class="p-slider__item"></div>
+      <div class="p-slider__item"></div>
+      <div class="p-slider__item"></div>
+      <div class="p-slider__item"></div>
+      <div class="p-slider__item"></div>
+      <div class="p-slider__item"></div>
+    </div>
+  </section>
+
+  <!-- Reason Section -->
+  <section class="p-reason">
+    <div class="p-reason__inner">
+      <div class="p-reason__heading">
+        <p class="p-reason__label">Why Choose Us</p>
+        <h2 class="p-reason__title">Edge Strategyが選ばれる理由</h2>
+      </div>
+      <div class="p-reason__content">
+        <div class="p-reason__image"></div>
+        <div class="p-reason__list">
+          <div class="p-reason__item p-reason__item--active">
+            <p class="p-reason__item-label">Reason 01</p>
+            <h3 class="p-reason__item-title">実績に裏付けられた確かな支援</h3>
+            <p class="p-reason__item-text">
+              〇〇社以上のコンサルティング実績を持ち、多様な業界・規模の企業様の成長を支援してきました。<br>
+              数値で測れる確かな成果を提供します。
+            </p>
+          </div>
+          <div class="p-reason__item">
+            <p class="p-reason__item-label">Reason 02</p>
+            <h3 class="p-reason__item-title">実行まで寄り添う伴走支援</h3>
+            <p class="p-reason__item-text">
+              戦略立案で終わらず、実行フェーズまで伴走します。<br>
+              クライアントと共に課題を乗り越え、 確実に成果を生み出すまでサポートします。
+            </p>
+          </div>
+          <div class="p-reason__item">
+            <p class="p-reason__item-label">Reason 03</p>
+            <h3 class="p-reason__item-title">机上の空論ではない、実行可能な戦略</h3>
+            <p class="p-reason__item-text">
+              理論だけでなく、実際のビジネス現場で実行可能な 戦略を提案します。<br>
+              現場の声を聞き、企業の実態に即した最適解を導き出します。
+            </p>
+          </div>
+          <div class="p-reason__item">
+            <p class="p-reason__item-label">Reason 04</p>
+            <h3 class="p-reason__item-title">迅速な意思決定支援</h3>
+            <p class="p-reason__item-text">
+              市場環境の変化に即座に対応します。<br>
+              スピード感を持った提案と実行で、ビジネスチャンスを逃しません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="p-news">
+    <div class="p-news__inner">
+      <div class="p-news__heading">
+        <p class="p-news__label">News & Cases</p>
+        <h2 class="p-news__title">お知らせと事例紹介</h2>
+      </div>
+      <div class="p-news__tabs">
+        <button class="p-news__tab p-news__tab--active">お知らせ</button>
+        <button class="p-news__tab">事例紹介</button>
+      </div>
+      <div class="p-news__list">
+        <div class="p-news__item">
+          <div class="p-news__item-meta">
+            <span class="p-news__item-date">2025.11.01</span>
+            <span class="p-news__item-category">お知らせ</span>
+          </div>
+          <p class="p-news__item-title">取締役人事に関するご報告</p>
+        </div>
+        <div class="p-news__item">
+          <div class="p-news__item-meta">
+            <span class="p-news__item-date">2025.11.01</span>
+            <span class="p-news__item-category">お知らせ</span>
+          </div>
+          <p class="p-news__item-title">取締役人事に関するご報告</p>
+        </div>
+        <div class="p-news__item">
+          <div class="p-news__item-meta">
+            <span class="p-news__item-date">2025.11.01</span>
+            <span class="p-news__item-category">お知らせ</span>
+          </div>
+          <p class="p-news__item-title">取締役人事に関するご報告</p>
+        </div>
+        <a href="#" class="c-button u-mt-20">
+          <span>お知らせ一覧</span>
+          <span class="c-button__icon"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="p-cta">
+    <div class="p-cta__overlay"></div>
+    <div class="p-cta__inner">
+      <div class="p-cta__heading">
+        <p class="p-cta__label">Contact</p>
+        <h2 class="p-cta__title">お問い合わせ</h2>
+      </div>
+      <p class="p-cta__hours">受付時間：平日 10:00 ~ 17:00 土日祝日除く</p>
+      <div class="p-cta__actions">
+        <a href="tel:00-0000-0000" class="p-cta__phone">00-0000-0000</a>
+        <a href="#contact" class="p-cta__button">
+          <span>お問い合わせ</span>
+          <span class="p-cta__button-icon"></span>
+        </a>
+      </div>
+    </div>
   </section>
 </main>
 <%- include('components/_footer.ejs') %>
