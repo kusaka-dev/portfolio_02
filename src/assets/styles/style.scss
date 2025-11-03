@@ -1,0 +1,5 @@
+@use './common/reset';
+@use './common/base';
+@use './common/mixins';
+@use './component/**/*.scss';
+@use './page/**/*.scss';

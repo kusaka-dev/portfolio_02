@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  background: $color-bg-gray;
+}
+
+a {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+}

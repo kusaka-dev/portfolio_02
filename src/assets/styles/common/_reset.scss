@@ -1,0 +1,73 @@
+/**
+ * A Modern CSS Reset
+ *
+ * @author Andy Bell - Piccalilli
+ * @link https://piccalil.li/blog/a-more-modern-css-reset/
+ * @license CC BY 4.0 (Creative Commons Attribution 4.0 International)
+ */
+
+/* ボックスサイジングルール */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* フォントサイズの自動拡大を防止 */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* デフォルトのマージンを削除してCSSでより良い制御を可能にする */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* role="list"を持つul、ol要素のリストスタイルを削除 */
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+/* bodyのコアデフォルト設定 */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* 見出しとインタラクティブ要素の行の高さを短く設定 */
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+/* 見出しのテキスト折り返しをバランスよく */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* クラスを持たないa要素にデフォルトスタイルを適用 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* 画像を扱いやすくする */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 入力要素とボタンにフォントを継承 */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* rows属性のないtextareaが小さくなりすぎないようにする */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* アンカーリンクでジャンプする要素に追加のスクロールマージンを設定 */
+:target {
+  scroll-margin-block: 5ex;
+}

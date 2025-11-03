@@ -1,0 +1,33 @@
+/**
+ * SCSS変数
+ * プロジェクト全体で使用する変数を定義
+ */
+
+// カラー
+$color-primary: #007bff;
+$color-text: #333;
+$color-text-light: #666;
+$color-text-lighter: #999;
+$color-bg: #fff;
+$color-bg-gray: #f5f5f5;
+$color-bg-dark: #333;
+$color-border-light: #e5e5e5;
+
+// フォント
+$font-family-base: 'Noto Sans JP', sans-serif;
+
+// ブレークポイント
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// z-index（値は10刻みで設定し、間に挿入できるようにする）
+$z-index-base: 1; // 通常の要素
+$z-index-dropdown: 100; // ドロップダウンメニュー
+$z-index-sticky: 200; // スティッキー要素
+$z-index-header: 300; // 固定ヘッダー
+$z-index-overlay: 400; // オーバーレイ・背景
+$z-index-modal: 500; // モーダルダイアログ
+$z-index-popover: 600; // ポップオーバー
+$z-index-tooltip: 700; // ツールチップ
+$z-index-notification: 800; // 通知・トースト

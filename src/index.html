@@ -1,0 +1,47 @@
+<%- include('components/_header.ejs', { pageTitle: 'ホーム | サイト名',
+description: 'これはサンプルページのディスクリプションです。', ogpDescription:
+'これはサンプルページのディスクリプションです。', pageUrl:
+'https://example.com/', ogpimg: 'https://example.com/ogp.jpg', keywords:
+'キーワード1, キーワード2, キーワード3' }) %>
+
+<main>
+  <section>
+    <h1>コーディングテンプレート</h1>
+    <p>
+      Vite + EJS + SCSSを使用したモダンなWeb開発テンプレートです。<br />
+      効率的な開発環境で、素早くプロジェクトを立ち上げることができます。
+    </p>
+  </section>
+
+  <section>
+    <h2>含まれる機能</h2>
+    <ul>
+      <li>Vite - 高速な開発サーバーとビルドツール</li>
+      <li>EJS - コンポーネントベースのテンプレートエンジン</li>
+      <li>SCSS - 変数、ミックスイン、ネストに対応したCSSプリプロセッサ</li>
+      <li>グロブインポート - SCSSファイルの自動インポート</li>
+      <li>モダンCSS Reset - アクセシビリティに配慮したリセットCSS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>使い方</h2>
+    <ol>
+      <li>依存関係のインストール: <code>npm install</code></li>
+      <li>開発サーバーの起動: <code>npm run dev</code></li>
+      <li>本番ビルド: <code>npm run build</code></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>プロジェクト構成</h2>
+    <ul>
+      <li><code>src/</code> - ソースファイル</li>
+      <li><code>src/components/</code> - EJSコンポーネント</li>
+      <li><code>src/assets/styles/</code> - SCSSファイル</li>
+      <li><code>src/assets/scripts/</code> - JavaScriptファイル</li>
+      <li><code>dist/</code> - ビルド出力先</li>
+    </ul>
+  </section>
+</main>
+<%- include('components/_footer.ejs') %>

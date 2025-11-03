@@ -1,0 +1,224 @@
+@use './variables' as *;
+@use "sass:color";
+
+/**
+ * SCSS Mixins
+ * 再利用可能なスタイルパターンを定義
+ */
+
+// ==========================================
+// レスポンシブデザイン
+// ==========================================
+
+// メディアクエリ（最大幅） - スマホ
+@mixin mq-sp {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+// メディアクエリ（最大幅） - タブレット
+@mixin mq-tablet {
+  @media (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// メディアクエリ（最大幅） - PC
+@mixin mq-pc {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// 使用例:
+// .element {
+//   @include mq-sp {
+//     width: 100%;
+//   }
+// }
+
+// ==========================================
+// コンテナ
+// ==========================================
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include mq-sp {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+// ==========================================
+// フォント
+// ==========================================
+
+// フォントサイズとline-heightを設定
+@mixin font-size($size, $line-height: null) {
+  font-size: $size;
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+// テキストの省略
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 複数行の省略
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+// ==========================================
+// Flexbox
+// ==========================================
+
+// Flexコンテナ（中央揃え）
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex（縦横中央）
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flex（横並び、垂直中央）
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+}
+
+// Flex（縦並び）
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Flex（両端揃え）
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ==========================================
+// 視覚効果
+// ==========================================
+
+// ホバーエフェクト（透明度）
+@mixin hover-opacity($opacity: 0.7, $duration: 0.3s) {
+  transition: opacity $duration ease;
+
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+// ホバーエフェクト（拡大）
+@mixin hover-scale($scale: 1.05, $duration: 0.3s) {
+  transition: transform $duration ease;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+// ==========================================
+// ボタン
+// ==========================================
+@mixin button-base {
+  display: inline-block;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $color-primary;
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background-color: color.scale($color-primary, $lightness: -20%);
+  }
+}
+
+// ==========================================
+// ユーティリティ
+// ==========================================
+
+// 画像のアスペクト比を維持
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: calc(#{$height} / #{$width} * 100%);
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// スクリーンリーダー用テキスト
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// クリアフィックス
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// 背景グラデーション
+@mixin gradient($direction, $color1, $color2) {
+  background: linear-gradient($direction, $color1, $color2);
+}
