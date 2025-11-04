@@ -17,9 +17,9 @@ export function initHeaderScroll() {
 
     // FVセクションを超えたらヘッダーのスタイルを変更
     if (scrollY > fvHeight) {
-      header.classList.add('l-header--scrolled');
+      header.classList.add('l-header--active');
     } else {
-      header.classList.remove('l-header--scrolled');
+      header.classList.remove('l-header--active');
     }
   }
 

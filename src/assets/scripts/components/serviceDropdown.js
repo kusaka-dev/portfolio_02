@@ -25,12 +25,26 @@ export function initServiceDropdown() {
   function showDropdown() {
     clearTimeout(hideTimeout);
     dropdown.classList.add("p-service-menu--visible");
+    header.classList.add("l-header--active");
+    navItem.classList.add("is-dropdown-open");
   }
 
   // ドロップダウンを非表示
   function hideDropdown() {
     hideTimeout = setTimeout(() => {
       dropdown.classList.remove("p-service-menu--visible");
+      navItem.classList.remove("is-dropdown-open");
+
+      // スクロール位置をチェックして、FVセクションを超えていない場合のみクラスを削除
+      const fvSection = document.querySelector('.p-fv');
+      if (fvSection) {
+        const fvHeight = fvSection.offsetHeight;
+        const scrollY = window.scrollY;
+
+        if (scrollY <= fvHeight) {
+          header.classList.remove("l-header--active");
+        }
+      }
     }, 100);
   }
 
