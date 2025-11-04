@@ -10,23 +10,16 @@
 // レスポンシブデザイン
 // ==========================================
 
-// メディアクエリ（最大幅） - スマホ
+// メディアクエリ（最大幅） - スマホ・モバイル
 @mixin mq-sp {
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-mobile) {
     @content;
   }
 }
 
 // メディアクエリ（最大幅） - タブレット
 @mixin mq-tablet {
-  @media (max-width: $breakpoint-lg) {
-    @content;
-  }
-}
-
-// メディアクエリ（最大幅） - PC
-@mixin mq-pc {
-  @media (max-width: $breakpoint-xl) {
+  @media (max-width: $breakpoint-tablet) {
     @content;
   }
 }

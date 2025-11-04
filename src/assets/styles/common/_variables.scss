@@ -21,10 +21,14 @@ $color-border-light: #e5e5e5;
 // フォント
 $font-family-base: 'Noto Sans JP', sans-serif;
 
-// ブレークポイント
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+// デバイス幅の基準値（単位なし。calc()内で使用）
+$device_pc: 1512;
+$device_tab: 1024;
+$device_sp: 390;
+
+// ブレークポイント（メディアクエリ用、単位付き）
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 769px;
 
 // z-index（値は10刻みで設定し、間に挿入できるようにする）
 $z-index-base: 1; // 通常の要素

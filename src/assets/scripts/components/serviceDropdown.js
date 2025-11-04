@@ -5,19 +5,20 @@
 export function initServiceDropdown() {
   const dropdown = document.querySelector(".p-service-menu");
   const header = document.querySelector(".l-header");
+  const caution = document.querySelector(".p-caution");
   const navItem = document.querySelector(".l-header__nav-item--has-dropdown");
   const serviceItems = document.querySelectorAll(".p-service-menu__item");
   const imageItems = document.querySelectorAll(".p-service-menu__image-item");
 
-  if (!dropdown || !header || !navItem) return;
+  if (!dropdown || !header || !navItem || !caution) return;
 
   let hideTimeout = null;
 
   // ドロップダウンの位置を調整
   function updateDropdownPosition() {
     const headerHeight = header.offsetHeight;
-
-    dropdown.style.top = `${headerHeight}px`;
+    const cautionHeight = caution.offsetHeight;
+    dropdown.style.top = `${headerHeight + cautionHeight}px`;
   }
 
   // ドロップダウンを表示
