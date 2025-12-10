@@ -8,25 +8,22 @@
   &__inner {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 120px;
+    padding: 0 min(calc(120 / #{$device_pc} * 100vw), 120px);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 119px;
+    justify-content: space-between;
   }
 
   &__content {
-    width: 556px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    width: 52%;
+    margin-right: min(calc(119 / #{$device_pc} * 100vw), 119px);
   }
 
   &__heading {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   &__label {
@@ -38,12 +35,16 @@
   }
 
   &__title {
-    font-size: 32px;
+    font-size: min(calc(32 / #{$device_pc} * 100vw), 32px);
     font-weight: 500;
     line-height: 1.8;
     letter-spacing: 0.64px;
     color: #000;
     margin: 0;
+
+    @include mq-tablet {
+      font-size: calc(32 / #{$device_tab} * 100vw);
+    }
   }
 
   &__text {
@@ -52,39 +53,61 @@
     line-height: 1.8;
     letter-spacing: 0.32px;
     color: #000;
-    margin: 0;
+    margin-bottom: 18px;
   }
 
   &__images {
-    position: relative;
-    width: 516px;
-    height: 435px;
+    width: 53%;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    display: grid;
+    grid-template-columns: min(calc(200 / #{$device_pc} * 100vw), 200px) min(calc(40 / #{$device_pc} * 100vw), 40px) min(calc(26 / #{$device_pc} * 100vw), 26px) min(calc(161 / #{$device_pc} * 100vw), 161px) min(calc(89 / #{$device_pc} * 100vw), 89px);
+    grid-template-rows: min(calc(152 / #{$device_pc} * 100vw), 152px) min(calc(98 / #{$device_pc} * 100vw), 98px) min(calc(45 / #{$device_pc} * 100vw), 45px) min(calc(57 / #{$device_pc} * 100vw), 57px) min(calc(83 / #{$device_pc} * 100vw), 83px);
+
+    @include mq-sp {
+      position: relative;
+      width: 100%;
+      grid-template-columns: calc(163 / #{$device_sp} * 100vw) calc(34 / #{$device_sp} * 100vw) calc(63 / #{$device_sp} * 100vw) calc(88.63 / #{$device_sp} * 100vw);
+      grid-template-rows: calc(102.71 / #{$device_sp} * 100vw) calc(39.29 / #{$device_sp} * 100vw) calc(71 / #{$device_sp} * 100vw) calc(91 / #{$device_sp} * 100vw);
+      margin-top: calc(-41 / #{$device_sp} * 100vw);
+    }
   }
 
   &__image {
-    position: absolute;
-    background-color: #d9d9d9;
-    border-radius: 4px;
 
-    &--1 {
-      width: 250px;
-      height: 187px;
-      top: 0;
-      right: 0;
+    img {
+      width: 100%;
     }
 
-    &--2 {
-      width: 200px;
-      height: 200px;
-      top: 152px;
-      left: 0;
+    &--01 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 5;
+
+      @include mq-sp {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+      }
     }
 
-    &--3 {
-      width: 250px;
-      height: 140px;
-      bottom: 0;
-      right: 0;
+    &--02 {
+      grid-column: 3 / 5;
+      grid-row: 1 / 3;
+
+      @include mq-sp {
+        grid-column: 3 / 5;
+        grid-row: 1 / 3;
+      }
+    }
+
+    &--03 {
+      grid-column: 4 / 6;
+      grid-row: 4 / 6;
+
+      @include mq-sp {
+        grid-column: 3 / 5;
+        grid-row: 3 / 5;
+      }
     }
   }
 }
