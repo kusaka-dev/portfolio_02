@@ -3,53 +3,56 @@
 
 // Project: Slider
 .p-slider {
-  height: 320px;
-  overflow: hidden;
-  position: relative;
-  background-color: #fff;
+  padding-block: 80px;
+
+  &__splide {
+    height: 100%;
+  }
 
   &__track {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
     height: 100%;
-    padding: 0 120px;
   }
 
   &__item {
-    background-color: #d9d9d9;
-    border-radius: 4px;
+    display: flex;
+    justify-content: center;
     flex-shrink: 0;
 
-    &:nth-child(1) {
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    &--01 {
       width: 186px;
-      height: 140px;
+      align-items: flex-start;
     }
 
-    &:nth-child(2) {
+    &--02 {
       width: 205px;
-      height: 296px;
+      padding-block: 45px;
+      align-items: center;
     }
 
-    &:nth-child(3) {
+    &--03 {
       width: 186px;
-      height: 144px;
+      align-items: flex-end;
     }
 
-    &:nth-child(4) {
+    &--04 {
       width: 205px;
-      height: 300px;
+      align-items: flex-start;
     }
 
-    &:nth-child(5) {
-      width: 225px;
-      height: 170px;
+    &--05 {
+      width: 170px;
+      padding-block: 45px;
+      align-items: center;
     }
 
-    &:nth-child(6) {
+    &--06 {
       width: 205px;
-      height: 296px;
+      align-items: flex-end;
     }
   }
 }
