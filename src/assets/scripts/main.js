@@ -9,6 +9,7 @@ import { initFvSlider } from './components/fvSlider.js';
 import { initHeaderScroll } from './components/headerScroll.js';
 import { initServiceDropdown } from './components/serviceDropdown.js';
 import { initAutoScrollSlider } from './components/autoScrollSlider.js';
+import { initReasonScroll } from './components/reasonScroll.js';
 
 // 初期化
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initServiceDropdown();
   initAutoScrollSlider();
+  initReasonScroll();
 });
